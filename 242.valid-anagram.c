@@ -12,7 +12,7 @@ bool isAnagram(char* s, char* t) {
     //本质和217一样，先排序再逐字对比
     qsort(s, strlen(s), sizeof(char), cmpStr);
     qsort(t, strlen(t), sizeof(char), cmpStr);
-    if(strcmp(s,t)==0){
+    if(strcmp(s,t)==0){//s指向的是第一个char，所以不能用==
         return true;
     }else{
         return false;
